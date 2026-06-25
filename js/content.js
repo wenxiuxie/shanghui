@@ -123,5 +123,27 @@
     document.addEventListener("langchange", paintAll);
   }
 
+  /* ---------- Site images (managed via CMS: content/site.json) ---------- */
+  function applySiteImages() {
+    var els = document.querySelectorAll("[data-site-img]");
+    if (!els.length) return;
+    getJSON("content/site.json").then(function (map) {
+      els.forEach(function (el) {
+        var url = map[el.getAttribute("data-site-img")];
+        if (!url) return; // leave placeholder when empty
+        if (el.classList.contains("qr-ph")) {
+          el.style.background = 'center/cover no-repeat url("' + url + '")';
+        } else {
+          // fill a .media-ph (or similar) with the uploaded photo
+          el.style.background = "none";
+          el.style.overflow = "hidden";
+          el.innerHTML = '<img src="' + esc(url) + '" alt="" ' +
+            'style="width:100%;height:100%;object-fit:cover;display:block">';
+        }
+      });
+    }).catch(function () { /* keep placeholders on error */ });
+  }
+
   document.addEventListener("DOMContentLoaded", mount);
+  document.addEventListener("DOMContentLoaded", applySiteImages);
 })();

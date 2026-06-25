@@ -21,6 +21,23 @@ public_folder: "/assets/uploads" # URL prefix used on the site
 locale: "zh_Hans"
 
 collections:
+  # ---------- 站点图片 Site Images ----------
+  - name: "site"
+    label: "站点图片 Site Images"
+    label_singular: "站点图片"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "site_images"
+        label: "站点图片 Site Images"
+        file: "content/site.json"
+        format: json
+        fields:
+          - { name: "home_event", label: "首页·交流活动配图 Home event photo", widget: "image", required: false, hint: "首页「会员权益」旁的配图，留空显示占位图" }
+          - { name: "about_photo", label: "关于页·成立仪式/合影 About photo", widget: "image", required: false, hint: "关于我们页右侧大图，留空显示占位图" }
+          - { name: "wechat_qr", label: "联系页·微信二维码 WeChat QR", widget: "image", required: false, hint: "联系页的微信公众号二维码，留空显示占位图案" }
+
   # ---------- 新闻 News ----------
   - name: "news"
     label: "新闻 News"
