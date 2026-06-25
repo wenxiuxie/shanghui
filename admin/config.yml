@@ -8,7 +8,7 @@ backend:
   name: git-gateway          # uses Netlify Identity + Git Gateway
   repo: wenxiuxie/shanghui
   branch: main               # branch the CMS commits to
-
+#
 # While testing locally you can run `npx decap-server` and
 # uncomment the next line to edit without authentication:
 # local_backend: true
