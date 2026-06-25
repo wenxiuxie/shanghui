@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>联系我们 | 华盛顿州华人总商会 CCCWA</title>
+  <meta name="description" content="联系华盛顿州华人总商会（CCCWA）：会员申请、合作咨询与活动报名。欢迎留言，我们会尽快回复。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="CCCWA Home"><img src="https://www.ccc-wa.org/uploads/2/5/5/3/25533632/published/cccwalogo1.png?1501133003" alt="" width="42" height="42"><span class="brand__text"><span class="brand__zh">华盛顿州华人总商会</span><span class="brand__en">Chinese Chamber of Commerce · WA</span></span></a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="navLinks">
+          <li><a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a></li>
+          <li><a href="about.html"><span data-zh>关于我们</span><span data-en>About</span></a></li>
+          <li><a href="events.html"><span data-zh>活动</span><span data-en>Events</span></a></li>
+          <li><a href="news.html"><span data-zh>新闻</span><span data-en>News</span></a></li>
+          <li><a href="directory.html"><span data-zh>会员名录</span><span data-en>Members</span></a></li>
+          <li><a href="contact.html"><span data-zh>联系我们</span><span data-en>Contact</span></a></li>
+        </ul>
+      </nav>
+      <div class="nav__right">
+        <div class="lang-toggle" role="group" aria-label="Language"><button data-lang-btn="zh" aria-pressed="true">中</button><button data-lang-btn="en" aria-pressed="false">EN</button></div>
+        <button class="nav__toggle" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div class="breadcrumb"><a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a> / <span data-zh>联系我们</span><span data-en>Contact</span></div>
+        <h1><span data-zh>联系我们</span><span data-en>Contact Us</span></h1>
+        <p><span data-zh>会员申请、合作咨询或活动报名，欢迎随时与我们联系。</span><span data-en>For membership, partnership or event enquiries — we'd love to hear from you.</span></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <!-- Left: info -->
+        <div class="reveal">
+          <span class="section__eyebrow"><span data-zh>联系方式</span><span data-en>Get in Touch</span></span>
+          <h2 class="section__title" style="text-align:left"><span data-zh>我们随时为您服务</span><span data-en>We're Here to Help</span></h2>
+          <ul class="info-list" style="margin-top:24px">
+            <li><span class="ico">✉</span><div><div class="label"><span data-zh>电子邮箱</span><span data-en>Email</span></div><a class="value" href="mailto:info@ccc-wa.org">info@ccc-wa.org</a></div></li>
+            <li><span class="ico">🌐</span><div><div class="label"><span data-zh>官方网站</span><span data-en>Website</span></div><a class="value" href="https://www.ccc-wa.org" target="_blank" rel="noopener">www.ccc-wa.org</a></div></li>
+            <li><span class="ico">📍</span><div><div class="label"><span data-zh>所在地区</span><span data-en>Location</span></div><div class="value"><span data-zh>华盛顿州，美国</span><span data-en>Washington State, USA</span></div></div></li>
+            <li><span class="ico">f</span><div><div class="label">Facebook</div><a class="value" href="https://www.facebook.com/cccwa.org/" target="_blank" rel="noopener">@cccwa.org</a></div></li>
+          </ul>
+
+          <div class="qr-box" style="margin-top:28px">
+            <div class="qr-ph" aria-hidden="true"></div>
+            <div>
+              <div class="value"><span data-zh>关注微信公众号</span><span data-en>Follow Our WeChat</span></div>
+              <p class="form__note" style="margin:.3rem 0 0"><span data-zh>扫描二维码，获取商会活动与资讯。（请在 CMS 中上传真实二维码图片替换占位图）</span><span data-en>Scan to follow for chamber updates. (Replace this placeholder with the real QR image via CMS.)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form (Netlify Forms) -->
+        <div class="reveal">
+          <div class="card" style="padding:30px">
+            <h3 style="margin-bottom:6px"><span data-zh>给我们留言</span><span data-en>Send Us a Message</span></h3>
+            <p class="form__note" style="margin-bottom:20px"><span data-zh>填写下表，我们会尽快与您联系。</span><span data-en>Fill in the form and we'll get back to you shortly.</span></p>
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="contact.html?sent=1" class="form">
+              <input type="hidden" name="form-name" value="contact">
+              <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+              <div class="field">
+                <label for="name"><span data-zh>姓名 *</span><span data-en>Name *</span></label>
+                <input id="name" name="name" type="text" required>
+              </div>
+              <div class="grid grid--2" style="gap:16px">
+                <div class="field">
+                  <label for="email"><span data-zh>邮箱 *</span><span data-en>Email *</span></label>
+                  <input id="email" name="email" type="email" required>
+                </div>
+                <div class="field">
+                  <label for="company"><span data-zh>公司 / 机构</span><span data-en>Company</span></label>
+                  <input id="company" name="company" type="text">
+                </div>
+              </div>
+              <div class="field">
+                <label for="topic"><span data-zh>咨询类型</span><span data-en>Topic</span></label>
+                <select id="topic" name="topic">
+                  <option value="membership">会员申请 / Membership</option>
+                  <option value="partnership">合作咨询 / Partnership</option>
+                  <option value="event">活动报名 / Event</option>
+                  <option value="other">其他 / Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message"><span data-zh>留言内容 *</span><span data-en>Message *</span></label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button class="btn btn--primary" type="submit"><span data-zh>提交留言</span><span data-en>Send Message</span></button>
+              <p class="form__note" id="formNote" hidden style="color:var(--red);font-weight:600"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="https://www.ccc-wa.org/uploads/2/5/5/3/25533632/published/cccwalogo1.png?1501133003" alt="" width="42" height="42"><span class="brand__text"><span class="brand__zh">华盛顿州华人总商会</span><span class="brand__en">CCCWA</span></span></a>
+          <p><span data-zh>注册于华盛顿州的非营利组织，致力于促进华盛顿州与中国之间的投资、贸易与商业合作。</span><span data-en>A Washington State nonprofit dedicated to promoting investment, trade and business cooperation between Washington and China.</span></p>
+          <div class="social"><a href="https://www.facebook.com/cccwa.org/" target="_blank" rel="noopener" aria-label="Facebook">f</a><a href="contact.html" aria-label="WeChat">微</a><a href="mailto:info@ccc-wa.org" aria-label="Email">✉</a></div>
+        </div>
+        <div><h4><span data-zh>快速链接</span><span data-en>Quick Links</span></h4><ul class="footer-links"><li><a href="about.html"><span data-zh>关于我们</span><span data-en>About</span></a></li><li><a href="events.html"><span data-zh>活动</span><span data-en>Events</span></a></li><li><a href="news.html"><span data-zh>新闻</span><span data-en>News</span></a></li><li><a href="directory.html"><span data-zh>会员名录</span><span data-en>Members</span></a></li></ul></div>
+        <div><h4><span data-zh>商会服务</span><span data-en>Services</span></h4><ul class="footer-links"><li><a href="about.html"><span data-zh>商业交流</span><span data-en>Networking</span></a></li><li><a href="about.html"><span data-zh>投资对接</span><span data-en>Investment</span></a></li><li><a href="about.html"><span data-zh>跨境贸易</span><span data-en>Trade</span></a></li><li><a href="contact.html"><span data-zh>会员申请</span><span data-en>Membership</span></a></li></ul></div>
+        <div><h4><span data-zh>联系方式</span><span data-en>Contact</span></h4><ul class="footer-links"><li><span data-zh>华盛顿州，美国</span><span data-en>Washington State, USA</span></li><li><a href="mailto:info@ccc-wa.org">info@ccc-wa.org</a></li><li><a href="https://www.ccc-wa.org" target="_blank" rel="noopener">www.ccc-wa.org</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> <span data-zh>华盛顿州华人总商会 (CCCWA)。保留所有权利。</span><span data-en>Chinese Chamber of Commerce in Washington State (CCCWA). All rights reserved.</span></span>
+        <span><span data-zh>由 Infinity Academy 实习项目设计开发</span><span data-en>Designed &amp; built via the Infinity Academy internship project</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // success message after Netlify form redirect
+    (function () {
+      if (location.search.indexOf("sent=1") === -1) return;
+      var note = document.getElementById("formNote");
+      if (!note) return;
+      var en = document.documentElement.getAttribute("data-lang") === "en";
+      note.style.color = "#177245";
+      note.textContent = en ? "Thank you! Your message has been sent." : "感谢您的留言，我们已收到，会尽快回复！";
+      note.hidden = false;
+      note.scrollIntoView({ behavior: "smooth", block: "center" });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+# =========================================================
+# CCCWA — Decap / Netlify CMS configuration
+# Lets chamber staff edit News & Events with no code.
+# Content is saved back to Git as JSON; the site reads it.
+# =========================================================
+
+backend:
+  name: git-gateway          # uses Netlify Identity + Git Gateway
+  branch: main               # branch the CMS commits to
+
+# While testing locally you can run `npx decap-server` and
+# uncomment the next line to edit without authentication:
+# local_backend: true
+
+publish_mode: simple
+media_folder: "assets/uploads"   # where uploaded images are stored
+public_folder: "/assets/uploads" # URL prefix used on the site
+
+# Bilingual editor labels
+locale: "zh_Hans"
+
+collections:
+  # ---------- 新闻 News ----------
+  - name: "news"
+    label: "新闻 News"
+    label_singular: "新闻"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "news_list"
+        label: "新闻列表 News List"
+        file: "content/news.json"
+        format: json
+        fields:
+          - name: "items"
+            label: "新闻条目 Articles"
+            label_singular: "新闻"
+            widget: "list"
+            summary: "{{fields.title_zh}} — {{fields.date}}"
+            fields:
+              - { name: "title_zh", label: "标题（中文）Title (ZH)", widget: "string" }
+              - { name: "title_en", label: "标题（英文）Title (EN)", widget: "string", required: false }
+              - { name: "category_zh", label: "分类（中文）Category (ZH)", widget: "string", required: false }
+              - { name: "category_en", label: "分类（英文）Category (EN)", widget: "string", required: false }
+              - { name: "date", label: "日期 Date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { name: "summary_zh", label: "摘要（中文）Summary (ZH)", widget: "text" }
+              - { name: "summary_en", label: "摘要（英文）Summary (EN)", widget: "text", required: false }
+              - { name: "image", label: "配图 Image", widget: "image", required: false, hint: "可选，留空显示默认图标" }
+              - { name: "link", label: "原文链接 External Link", widget: "string", required: false, hint: "如微信公众号文章链接，可留空" }
+
+  # ---------- 活动 Events ----------
+  - name: "events"
+    label: "活动 Events"
+    label_singular: "活动"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "events_list"
+        label: "活动列表 Events List"
+        file: "content/events.json"
+        format: json
+        fields:
+          - name: "items"
+            label: "活动条目 Events"
+            label_singular: "活动"
+            widget: "list"
+            summary: "{{fields.title_zh}} — {{fields.date}}"
+            fields:
+              - { name: "title_zh", label: "名称（中文）Title (ZH)", widget: "string" }
+              - { name: "title_en", label: "名称（英文）Title (EN)", widget: "string", required: false }
+              - { name: "date", label: "日期 Date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { name: "desc_zh", label: "简介（中文）Description (ZH)", widget: "text", required: false }
+              - { name: "desc_en", label: "简介（英文）Description (EN)", widget: "text", required: false }
+              - { name: "location_zh", label: "地点（中文）Location (ZH)", widget: "string", required: false }
+              - { name: "location_en", label: "地点（英文）Location (EN)", widget: "string", required: false }

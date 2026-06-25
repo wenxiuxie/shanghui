@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "title_zh": "中美跨境贸易实务研讨会",
+      "title_en": "US-China Cross-Border Trade Practice Seminar",
+      "date": "2026-07-18",
+      "desc_zh": "邀请贸易、海关与法律专家解读最新政策，分享进出口实务经验。",
+      "desc_en": "Trade, customs and legal experts share the latest policy updates and practical import/export know-how.",
+      "location_zh": "西雅图 · 商会会议中心",
+      "location_en": "Seattle · CCCWA Conference Center"
+    },
+    {
+      "title_zh": "会员企业季度联谊午餐会",
+      "title_en": "Quarterly Member Networking Luncheon",
+      "date": "2026-08-05",
+      "desc_zh": "面向全体会员的轻松交流活动，结识同行、拓展商业人脉。",
+      "desc_en": "A relaxed networking event open to all members — meet peers and grow your business network.",
+      "location_zh": "贝尔维尤 · 会员酒店宴会厅",
+      "location_en": "Bellevue · Member Hotel Ballroom"
+    },
+    {
+      "title_zh": "新会员入会说明会",
+      "title_en": "New Member Orientation",
+      "date": "2026-09-12",
+      "desc_zh": "介绍商会服务、会员权益与资源对接渠道，欢迎有意加入的企业参加。",
+      "desc_en": "An introduction to chamber services, member benefits and resources — prospective members welcome.",
+      "location_zh": "线上 (Zoom)",
+      "location_en": "Online (Zoom)"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.netlify/
+
+# Source brief documents (not part of the published site)
+*.docx
+
+# Claude Code config & old-site reference dump (not part of the published site)
+.claude/
+yuan/
